@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "font-awesome": "^4.7.0",
+    "font-awesome5": "^1.0.5",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.5.6",
+    "musicmatch": "^0.3.2",
+    "node-sass": "^4.12.0",
+    "node-spotify-api": "^1.1.1",
+    "popper.js": "^1.15.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-native": "^0.59.8",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.0",
+    "socket.io": "^2.2.0",
+    "spotify-web-api-node": "^4.0.0",
+    "unsplash-js": "^5.0.0",
+    "webkit-npm": "^3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

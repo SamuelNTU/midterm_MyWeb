@@ -1,0 +1,136 @@
+
+.image-viewer__container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.image-viewer__title {
+	font-size: 5rem;
+	font-weight: 600;
+	color: #615dec;
+	margin: 0;
+	margin-top: 2rem;
+	margin-bottom: 0px;
+}
+
+.image-viewer__main {
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+	margin-top: 10px;
+	
+	border:3px solid black;
+	
+}
+
+.image-viewer__button {
+	display: inline;
+	background: none;
+	border: none;
+	border-radius: 50%;
+}
+
+.image-viewer__button img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.image-viewer__button img:hover {
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.image-viewer__button:focus {
+	outline: none;
+}
+
+.image-viewer__display {
+	position: relative;
+	padding: 15px;
+	margin: 3rem;
+	max-width: 80rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 0.6rem;
+}
+
+.image-viewer__display-source-wrapper {
+	position: absolute;
+	font-size: 12px;
+	left: 50%;
+	margin-right: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100em;
+	text-align: center;
+	bottom: 0;
+}
+
+#display {
+	object-fit: contain;
+	width: 50rem;
+	height: 30rem;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+#display:hover {
+	opacity: 0.5;
+}
+
+#source {
+	display: inline;
+	color: black;
+}
+
+.disabled {
+	opacity: 0.2;
+}
+
+.disabled:hover {
+	border-color: transparent !important;
+	cursor: not-allowed;
+}
+
+
+/* modal part */
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 15%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content1 {
+	margin: auto;
+	display: block;
+	/* width: 50%; */
+	max-height:500px;
+	max-width: 700px;
+  }
+.close1 {
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+  }
+

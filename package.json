@@ -1,0 +1,21 @@
+{
+  "name": "serverclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd own && npm start",
+    "server": "cd own/src/nodeServer && npm start",
+    "spotify-server": "cd own && nodemon src/spotify_authorization_code/app.js ",
+    "start": "concurrently - kill-others \"npm run server\" \"npm run client\" \"npm run spotify-server\"",
+    "install_client": "cd own && npm install",
+    "install_server": "cd own/src/nodeServer && npm install",
+    "install": "npm run install_server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "concurrently": "3.5.1"
+  }
+}
