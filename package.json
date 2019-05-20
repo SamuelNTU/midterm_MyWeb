@@ -10,7 +10,7 @@
     "start": "concurrently - kill-others \"npm run server\" \"npm run client\" \"npm run spotify-server\"",
     "install_client": "cd own && npm install",
     "install_server": "cd own/src/nodeServer && npm install",
-    "install": "npm run install_server"
+    "install": "npm run install_server && npm run install_client"
   },
   "keywords": [],
   "author": "",

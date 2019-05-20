@@ -30,9 +30,9 @@ class ImageViewer extends Component {
  searchAPT=async()=>{
   const img = document.getElementById("display");
    const search=document.getElementById("search_photo").value
+   if(search!==""){
    const imgstate=document.getElementById("imgstate")
    var img_count=this.state.img_count
-   console.log(search)
    this.setState({page:(this.state.page+1)})
    imgstate.innerHTML="reqesting..."
    img_list=await unsplash.search.photos(search, this.state.page,20).then(toJson)
@@ -46,6 +46,7 @@ class ImageViewer extends Component {
       document.getElementById("source").href =
         img_list['results'][img_count]["urls"]["regular"];
     }
+  }
   // console.log(this.state.images) 
  
   getAPI= async()=>{
@@ -54,6 +55,7 @@ class ImageViewer extends Component {
     var img_count=this.state.img_count
     this.setState({loading:1})
     document.getElementById("pic_for").onclick=null;
+    document.getElementById("current_img").style.display='inline'
     var getAPI=this.state.getAPI
     imgstate.innerHTML="reqesting..."
     //操你媽 await 玩不是promise 
@@ -170,8 +172,8 @@ class ImageViewer extends Component {
             </button>
           </form>
           <button onClick={this.getAPI} className="btn btn-defaulf border-dark col-3 m-3 p-0">Request 20 newest img</button>
-          <p id="imgstate" className="col-3">test</p>
-          <p className="bold col-md-12">currently showing: {this.state.getAPI-20} - {this.state.getAPI} images</p>
+          <p id="imgstate" className="col-3"></p>
+          <p className="bold col-md-12" id="current_img" style={{display:'none'}}>currently showing newest: {this.state.getAPI-20} - {this.state.getAPI} images</p>
           <div className="container m-3 p-0">
           
           </div>
