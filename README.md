@@ -28,7 +28,7 @@ go to web browser -> localhost:3000
 ## Music
 1.spotify api 的flow chart
 
-2.有一個旋轉式的css搭配js特效，使用accesstoken認證spotifyApi request 歌曲的資料(一次10首)，來顯示從spotify接收到的album image，可以播放歌曲的音訊(如果回傳的json有previewUrl的話、也可能是null就不會撥放)，喜歡歌曲的話可以按source連結到spotify網站，聽整首歌。
+2.有一個旋轉式的css搭配js特效，按每個album的左邊會順時鐘轉、按右邊逆時鐘轉，使用accesstoken認證spotifyApi request 歌曲的資料(一次10首)，來顯示從spotify接收到的album image，可以播放歌曲的音訊(如果回傳的json有previewUrl的話、也可能是null就不會撥放)，喜歡歌曲的話可以按source連結到spotify網站，聽整首歌。
 
 3.一些我對音樂的愛，和我喜歡的DJ說的一些話
 
