@@ -20,7 +20,7 @@ const ChatModal = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title" id="myModalLabel">
-                Chat Chat
+                Chat Chat <p style={{fontSize:15}}>(save history will save the chat another schema of my mongodb, and clear the render Schema)</p>
               </h4>
               <button
                 type="button"

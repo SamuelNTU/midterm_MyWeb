@@ -119,11 +119,12 @@ db.once('open', () => {
                 body=item.body
                 savemessage=new SaveMessage({name,body,time})
                 savemessage.save((err)=>{if (err) console.error(err)})
-            
+                console.log("save history successfully")
             })
         }).then(Message.deleteMany({}, () => {
-            console.log("why")
+            
             // Emit cleared
+            console.log("clear render Schema successfully")
             socket.broadcast.emit('cleared')
         }))
         
