@@ -10,6 +10,8 @@ cd midterm_MyWeb
 npm i 
 npm start
 
+this will open three port 3000(frontend),5000(backend mongoose),8888(backend spotify) on localhost
+
 go to web browser -> localhost:3000
 ```
 
