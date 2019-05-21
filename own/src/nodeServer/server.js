@@ -2,16 +2,24 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path=require('path')
 const Message = require('./message')
+const SaveMessage=require('./savemessage')
 const mw = require('./middleware/Time.js')
 
+var today = new Date();
 
 // Create server to serve index.html
 const app = express()
 const http = require('http').Server(app)
 const port = process.env.PORT || 5000
 
-app.use(mw({ option1: '1'}))
 
+getTime=()=>{
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+return dateTime
+}
+app.use(mw({ option1: '1'}))
 
 app.get('/', function (req, res) {
     var responseText = 'Hello World!<br>'
@@ -72,7 +80,6 @@ db.once('open', () => {
             .sort({ _id: 1 })
             .exec((err, res) => {
                 if (err) throw err
-
                 socket.emit('init', res)
             })
 
@@ -87,6 +94,8 @@ db.once('open', () => {
             } else {
                 // Insert message
                 const message = new Message({ name, body })
+                
+
                 message.save(err => {
                     if (err) console.error(err)
 
@@ -100,13 +109,36 @@ db.once('open', () => {
                 })
             }
         })
+        socket.on('save',()=>{
+        var time=getTime()
+         Message.find().exec().then(data=>{
+            var body=""
+            data.forEach((item)=>{
+                console.log(item.name)
+                name=item.name
+                body=item.body
+                savemessage=new SaveMessage({name,body,time})
+                savemessage.save((err)=>{if (err) console.error(err)})
+            
+            })
+        }).then(Message.deleteMany({}, () => {
+            console.log("why")
+            // Emit cleared
+            socket.broadcast.emit('cleared')
+        }))
+        
+    }
+
+        )
 
         socket.on('clear', () => {
             // Remove all chats from collection
+
             Message.deleteMany({}, () => {
                 // Emit cleared
                 socket.broadcast.emit('cleared')
             })
         })
+        
     })
 })

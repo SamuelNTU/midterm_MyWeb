@@ -42,7 +42,7 @@ const ChatModal = () => {
               >
                 Close
               </button>
-              <button type="button" className="btn btn-primary">
+              <button type="button" id="save_history" className="btn btn-primary">
                 Save history
               </button>
             </div>

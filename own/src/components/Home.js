@@ -106,7 +106,7 @@ class App extends Component {
           <ul className="list-unstyled CTAs">
             <li>
               <a
-                href="https://bootstrapious.com/tutorial/files/sidebar.zip"
+                href="#top"
                 className="download"
               >
                 Download source
@@ -114,7 +114,7 @@ class App extends Component {
             </li>
             <li>
               <a
-                href="https://bootstrapious.com/p/bootstrap-sidebar"
+                href="#top"
                 className="article"
               >
                 Back to article

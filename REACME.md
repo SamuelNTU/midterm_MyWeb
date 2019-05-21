@@ -11,7 +11,7 @@
 升級版的imageViewer，可以request(https://unsplash.com)的圖片資料，每次reuqest20張照片，可以在viewer上看照片，有request網站上傳的最新圖片資料。(這部分沒有寫後端，是直接在前端get資料、之後要修正把apikey放在後端)
 
 ## 側面ChatApp
-前端放在react-app執行(localhost:3000)，後端接收資料(localhost:5000)並存到mondodb，中間用socket.io來即時性雙向溝通，而下次再開啟仍會讀取mongodb並顯示上次留下的訊息，save button的部分尚未完成(之後要做可以存訊息的功能)。
+前端放在react-app執行(localhost:3000)，後端接收資料(localhost:5000)並存到mondodb，中間用socket.io來即時性雙向溝通，而下次再開啟仍會讀取mongodb並顯示上次留下的訊息，save button的部分能夠儲存訊息，在monggodb也會顯示訊息儲存時間。
 
 ## Music
 1.spotify api 的flow chart

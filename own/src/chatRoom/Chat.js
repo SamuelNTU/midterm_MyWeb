@@ -5,7 +5,7 @@ const element = id => {
   return document.getElementById(id);
 };
 
-class Chat extends Component {
+class Chat extends Component {  
   state = {
     chatRoomName: "",
     user: "",
@@ -13,6 +13,7 @@ class Chat extends Component {
   };
   componentDidMount() {
     const status = element("status");
+    const save_messages=element('save_history')
     const messages = element("messages");
     const textarea = element("textarea");
     const username = element("username");
@@ -91,6 +92,11 @@ class Chat extends Component {
           event.preventDefault();
         }
       });
+      
+      save_messages.addEventListener('click',()=>{
+        clearList();
+        socket.emit('save')
+      })
 
       // Handle Chat Clear
       clearBtn.addEventListener("click", () => {
