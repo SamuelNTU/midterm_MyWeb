@@ -50,7 +50,7 @@ cond(no)->op
 ```
 
 # 其他說明
-有些功能還沒啟用，ex:flappybird、todolist、sidebar可以加很多連結，之後可以繼續加強。
+有些功能還沒啟用，ex:flappybird、todolist、sidebar可以加連結，之後可以繼續加強。
 
 # 使用與參考之框架/模組/原始碼
 
@@ -96,7 +96,7 @@ https://www.youtube.com/watch?v=gnsO8-xJ8rs&t=2404s
 
 
 # 我的貢獻
-除了imageViewer(參考css)、chatApp(參考比較多原始碼)、sidebar，其他幾乎都是from scratch，所以設計方面也下了不少功夫，也把很多應用融合到MyWeb裡面
+除了imageViewer(參考css)、chatApp(參考上課比較多原始碼)、sidebar，其他幾乎都是from scratch，所以設計方面也下了不少功夫，也把很多應用融合到MyWeb裡面
 
 # 心得
 這次project從forntend到backend都有涉獵到，學習到很多東西、也應用很多上課教的東西，這門真的是一門好課，是成為full stack web developer入門到中階的課程，學期初從完全不懂html tag，到現在應用react-app做前端、用nodeJS寫後端、git的版本控制...，學習到很多Web知識真的很感謝老師完整的講義，老師肯定花很多時間準備，所以我也是用我的全力去學習，謝謝老師提供這門課。
