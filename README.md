@@ -4,6 +4,7 @@
 
 
 # 使用/操作方式
+<<<<<<< HEAD
 ```
 cd midterm_MyWeb 
 npm i 
@@ -12,6 +13,8 @@ npm start
 go to web browser -> localhost:3000
 ```
 
+=======
+>>>>>>> 634a81a62be118096ca20de06fb89760f2c84749
 ## Home
 基本自我介紹，側邊有聊天的icon點擊可以聊天
 
