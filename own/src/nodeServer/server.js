@@ -59,7 +59,7 @@ http.listen(port, () => {
 })
 
 // Connect to mongo
-mongoose.connect('mongodb+srv://Samuel:samuellily1811@cluster0-9lanp.gcp.mongodb.net/test?retryWrites=true', {
+mongoose.connect('mongodb+srv://account:password@cluster0-9lanp.gcp.mongodb.net/test?retryWrites=true', {
     useNewUrlParser: true
 })
 db = mongoose.connection
